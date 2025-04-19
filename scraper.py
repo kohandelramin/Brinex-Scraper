@@ -1,5 +1,5 @@
 
-# Brinex Scraper - GitHub-friendly Version
+# Brinex Scraper
 
 import os
 import time
@@ -20,7 +20,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 # Constants (loaded from environment or .env file)
 LOGIN_URL = "https://b2b.brinex.ru/login"
 KEYWORDS = os.getenv("SCRAPE_KEYWORDS", "BrandA,BrandB,BrandC").split(',')
-SPREADSHEET_NAME = "B2B Rival"
+SPREADSHEET_NAME = os.getenv("SPREADSHEET_NAME")
 GOOGLE_SCRIPT_URL = os.getenv("GOOGLE_SCRIPT_URL")
 USERNAME = os.getenv("BRINEX_USERNAME")
 PASSWORD = os.getenv("BRINEX_PASSWORD")
